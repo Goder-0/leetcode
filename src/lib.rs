@@ -21,4 +21,13 @@ mod tests {
             vec![1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
         );
     }
+
+    #[test]
+    fn permutation() {
+        let v = vec![0, 2, 1, 5, 3, 4];
+        assert_eq!(
+            vector::permutation::build_array_from_permutation(&v),
+            [0, 1, 2, 4, 5, 3]
+        );
+    }
 }
