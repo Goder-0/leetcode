@@ -1,4 +1,3 @@
-```markdown
 ## 관련 이슈
 
 closes #<issue_number> (, ...)
@@ -10,4 +9,3 @@ closes #<issue_number> (, ...)
 ## 특이 사항 (특이 사항이 있는 경우에만 작성)
 
 (특이 사항의 상세 내용)
-```
