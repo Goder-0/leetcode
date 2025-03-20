@@ -30,4 +30,13 @@ mod tests {
             [0, 1, 2, 4, 5, 3]
         );
     }
+
+    #[test]
+    fn running_sum() {
+        let v = vec![1, 2, 3, 4, 5];
+        assert_eq!(
+            vector::running_sum::running_sum_of_1d_array(&v),
+            vec![1, 3, 6, 10, 15]
+        );
+    }
 }
