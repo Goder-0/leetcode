@@ -1,9 +1,9 @@
-pub fn build_array_from_permutation(nums: &Vec<i32>) -> Vec<i32> {
-    let mut ans: Vec<i32> = vec![0; nums.len()];
-    for i in 0..nums.len() {
-        let num = usize::try_from(nums[i]).expect("distinct numbers");
-        let num = nums.get(num).expect("num is index");
-        ans[i] = *num;
-    }
-    ans
+#[must_use]
+pub fn build_array_from_permutation(nums: &[i32]) -> Vec<i32> {
+    nums.iter()
+        .map(|&num| {
+            let index = usize::try_from(num).unwrap_or(0);
+            nums.get(index).copied().unwrap_or(0)
+        })
+        .collect()
 }
