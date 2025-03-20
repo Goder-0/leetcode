@@ -45,4 +45,13 @@ mod tests {
         let v = vec![vec![2, 8, 7], vec![7, 1, 3], vec![1, 9, 5]];
         assert_eq!(vector::richest::richest_customer_wealth(&v), 17);
     }
+
+    #[test]
+    fn shuffle() {
+        let v = vec![2, 5, 1, 3, 4, 7];
+        assert_eq!(
+            vector::shuffle::shuffle_the_array(&v, 3),
+            vec![2, 3, 5, 4, 1, 7]
+        );
+    }
 }
