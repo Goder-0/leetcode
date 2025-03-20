@@ -63,4 +63,11 @@ mod tests {
             "128[.]0[.]0[.]1".to_string()
         );
     }
+
+    #[test]
+    fn jewel_stone() {
+        let s1 = "aAb".to_string();
+        let s2 = "aAaAzzzzBBBBbb".to_string();
+        assert_eq!(string::jewel_stone::jewels_and_stones(&s1, &s2), 6);
+    }
 }
