@@ -124,4 +124,10 @@ mod tests {
             52
         );
     }
+
+    #[test]
+    fn pair() {
+        let v = vec![1, 2, 3, 1, 1, 3];
+        assert_eq!(numbers::pair::number_of_good_pairs(&v), 4);
+    }
 }
