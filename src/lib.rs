@@ -54,4 +54,13 @@ mod tests {
             vec![2, 3, 5, 4, 1, 7]
         );
     }
+
+    #[test]
+    fn ip_address() {
+        let s = "128.0.0.1".to_string();
+        assert_eq!(
+            string::ip_address::defanging_an_ip_address(&s),
+            "128[.]0[.]0[.]1".to_string()
+        );
+    }
 }
