@@ -1,4 +1,4 @@
-pub fn concatenation_of_array(nums: &Vec<i32>, n: usize) -> Vec<i32> {
-    let ans = nums.repeat(2);
-    ans
+#[must_use]
+pub fn concatenation_of_array(nums: &[i32]) -> Vec<i32> {
+    nums.repeat(2)
 }
