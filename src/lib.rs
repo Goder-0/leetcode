@@ -39,4 +39,10 @@ mod tests {
             vec![1, 3, 6, 10, 15]
         );
     }
+
+    #[test]
+    fn richest() {
+        let v = vec![vec![2, 8, 7], vec![7, 1, 3], vec![1, 9, 5]];
+        assert_eq!(vector::richest::richest_customer_wealth(&v), 17);
+    }
 }
