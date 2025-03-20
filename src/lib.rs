@@ -83,4 +83,13 @@ mod tests {
             6
         );
     }
+
+    #[test]
+    fn sorting() {
+        let s = "is2 sentence4 This1 a3".to_string();
+        assert_eq!(
+            string::sorting::sorting_the_sentence(&s),
+            "This is a sentence".to_string()
+        );
+    }
 }
