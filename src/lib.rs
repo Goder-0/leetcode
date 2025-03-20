@@ -70,4 +70,17 @@ mod tests {
         let s2 = "aAaAzzzzBBBBbb".to_string();
         assert_eq!(string::jewel_stone::jewels_and_stones(&s1, &s2), 6);
     }
+
+    #[test]
+    fn maximum_word() {
+        let v = vec![
+            "alice and bob love leetcode".to_string(),
+            "i think so too".to_string(),
+            "this is great thanks very much".to_string(),
+        ];
+        assert_eq!(
+            string::maximum_word::maximum_number_of_words_found_in_sentences(&v),
+            6
+        );
+    }
 }
