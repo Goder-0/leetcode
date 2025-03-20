@@ -92,4 +92,28 @@ mod tests {
             "This is a sentence".to_string()
         );
     }
+
+    #[test]
+    fn count() {
+        let v = vec![
+            vec!["phone", "blue", "pixel"],
+            vec!["computer", "silver", "phone"],
+            vec!["phone", "gold", "iphone"],
+        ];
+
+        let v: Vec<Vec<String>> = v
+            .into_iter()
+            .map(|inner| {
+                inner
+                    .into_iter()
+                    .map(std::string::ToString::to_string)
+                    .collect()
+            })
+            .collect();
+
+        assert_eq!(
+            string::count::count_items_matching_a_rule(&v, "type", "phone"),
+            2
+        );
+    }
 }
