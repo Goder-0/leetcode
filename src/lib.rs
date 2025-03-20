@@ -15,9 +15,9 @@ mod tests {
 
     #[test]
     fn concatenation() {
-        let v: Vec<i32> = vec![1, 2, 3, 4, 5];
+        let v = [1, 2, 3, 4, 5];
         assert_eq!(
-            vector::concatenation::concatenation_of_array(&v, 5),
+            vector::concatenation::concatenation_of_array(&v),
             vec![1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
         );
     }
