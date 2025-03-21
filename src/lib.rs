@@ -70,4 +70,14 @@ mod tests {
         let s2 = "aAaAzzzzBBBBbb".to_string();
         assert_eq!(string::jewel_stone::jewels_and_stones(&s1, &s2), 6);
     }
+
+    #[test]
+    fn shuffle_string() {
+        let s = "codeleet";
+        let v = vec![4, 5, 6, 7, 0, 2, 1, 3];
+        assert_eq!(
+            en_de_coding::shuffle_string::shuffle_string(s, &v),
+            "leetcode".to_string()
+        );
+    }
 }
