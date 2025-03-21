@@ -8,6 +8,7 @@ mod tests {
     use task::*;
 
     use super::*;
+    use crate::task::en_de_coding::ListNode;
 
     #[test]
     fn add() {
@@ -202,6 +203,22 @@ mod tests {
         assert_eq!(
             en_de_coding::decode_message::decode_the_message(s1, s2),
             "this is a secret"
+        );
+    }
+
+    #[test]
+    fn convert() {
+        let list = Some(Box::new(ListNode {
+            val: 1,
+            next: Some(Box::new(ListNode {
+                val: 0,
+                next: Some(Box::new(ListNode::new(1))),
+            })),
+        }));
+
+        assert_eq!(
+            en_de_coding::convert::convert_binary_number_in_a_linked_list_to_integer(&list),
+            5
         );
     }
 }
