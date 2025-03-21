@@ -3,6 +3,8 @@ pub mod task;
 #[cfg(test)]
 mod tests {
 
+    use std::vec;
+
     use task::*;
 
     use super::*;
@@ -171,6 +173,15 @@ mod tests {
         assert_eq!(
             en_de_coding::xor::decode_xored_array(&v, 4),
             vec![4, 2, 0, 7, 4]
+        )
+    }
+
+    #[test]
+    fn decompress() {
+        let v = vec![1, 2, 3, 4];
+        assert_eq!(
+            en_de_coding::decompress::decompress_run_length_encoded_list(&v),
+            vec![2, 4, 4, 4]
         );
     }
 }
