@@ -3,6 +3,8 @@ pub mod task;
 #[cfg(test)]
 mod tests {
 
+    use std::vec;
+
     use task::*;
 
     use super::*;
@@ -69,5 +71,14 @@ mod tests {
         let s1 = "aAb".to_string();
         let s2 = "aAaAzzzzBBBBbb".to_string();
         assert_eq!(string::jewel_stone::jewels_and_stones(&s1, &s2), 6);
+    }
+
+    #[test]
+    fn decompress() {
+        let v = vec![1, 2, 3, 4];
+        assert_eq!(
+            en_de_coding::decompress::decompress_run_length_encoded_list(&v),
+            vec![2, 4, 4, 4]
+        );
     }
 }
