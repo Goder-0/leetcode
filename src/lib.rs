@@ -151,4 +151,17 @@ mod tests {
             21
         );
     }
+
+    #[test]
+    fn small_count() {
+        let v = [8, 1, 2, 2, 3];
+        assert_eq!(
+            numbers::small_count::how_many_numbers_are_smaller_than_the_current_numbers_1(&v),
+            vec![4, 0, 1, 1, 3]
+        );
+        assert_eq!(
+            numbers::small_count::how_many_numbers_are_smaller_than_the_current_numbers_2(&v),
+            vec![4, 0, 1, 1, 3]
+        );
+    }
 }
