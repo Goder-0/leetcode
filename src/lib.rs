@@ -194,4 +194,14 @@ mod tests {
             "leetcode".to_string()
         );
     }
+
+    #[test]
+    fn decode_message() {
+        let s1 = "the quick brown fox jumps over the lazy dog";
+        let s2 = "vkbs bs t suepuv";
+        assert_eq!(
+            en_de_coding::decode_message::decode_the_message(s1, s2),
+            "this is a secret"
+        );
+    }
 }
