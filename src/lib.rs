@@ -238,4 +238,15 @@ mod tests {
             6
         );
     }
+
+    #[test]
+    fn create_array() {
+        assert_eq!(
+            iterations::create_array::create_target_array_in_the_given_order(
+                &[0, 1, 2, 3, 4],
+                &[0, 1, 2, 2, 1]
+            ),
+            vec![0, 4, 1, 3, 2]
+        );
+    }
 }
