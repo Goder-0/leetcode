@@ -45,4 +45,16 @@ mod tests {
         let v = vec![vec![2, 8, 7], vec![7, 1, 3], vec![1, 9, 5]];
         assert_eq!(vector::richest::richest_customer_wealth(&v), 17);
     }
+
+    #[test]
+    fn substract() {
+        assert_eq!(
+            numbers::substract::subtract_the_product_and_sum_of_digits_of_an_integer(234),
+            15
+        );
+        assert_eq!(
+            numbers::substract::subtract_the_product_and_sum_of_digits_of_an_integer(4421),
+            21
+        );
+    }
 }
