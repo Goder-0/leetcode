@@ -54,4 +54,13 @@ mod tests {
             vec![2, 3, 5, 4, 1, 7]
         );
     }
+
+    #[test]
+    fn xor() {
+        let v = vec![6, 2, 7, 3];
+        assert_eq!(
+            en_de_coding::xor::decode_xored_array(&v, 4),
+            vec![4, 2, 0, 7, 4]
+        );
+    }
 }
