@@ -221,4 +221,13 @@ mod tests {
             5
         );
     }
+
+    #[test]
+    fn after_performing() {
+        let v = vec!["--X", "X++", "X++"];
+        assert_eq!(
+            iterations::after_performing::final_value_of_variable_after_performing_operations(&v),
+            1
+        );
+    }
 }
