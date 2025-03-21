@@ -139,4 +139,16 @@ mod tests {
             vec![true, true, true, false, true]
         );
     }
+
+    #[test]
+    fn substract() {
+        assert_eq!(
+            numbers::substract::subtract_the_product_and_sum_of_digits_of_an_integer(234),
+            15
+        );
+        assert_eq!(
+            numbers::substract::subtract_the_product_and_sum_of_digits_of_an_integer(4421),
+            21
+        );
+    }
 }
