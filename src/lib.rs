@@ -116,4 +116,12 @@ mod tests {
             2
         );
     }
+
+    #[test]
+    fn minimum_sum() {
+        assert_eq!(
+            numbers::minimum_sum::minimum_sum_of_four_digit_number_after_splitting_digits(2932),
+            52
+        );
+    }
 }
