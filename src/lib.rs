@@ -261,4 +261,15 @@ mod tests {
             13
         );
     }
+
+    #[test]
+    fn minimum_move() {
+        assert_eq!(
+            iterations::minimum_move::minimum_number_of_moves_to_seat_everyone(
+                &mut [3, 1, 5],
+                &mut [2, 7, 4]
+            ),
+            4
+        );
+    }
 }
