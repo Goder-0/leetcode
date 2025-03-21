@@ -162,6 +162,15 @@ mod tests {
         assert_eq!(
             numbers::small_count::how_many_numbers_are_smaller_than_the_current_numbers_2(&v),
             vec![4, 0, 1, 1, 3]
+        )
+    }
+
+    #[test]
+    fn xor() {
+        let v = vec![6, 2, 7, 3];
+        assert_eq!(
+            en_de_coding::xor::decode_xored_array(&v, 4),
+            vec![4, 2, 0, 7, 4]
         );
     }
 }
