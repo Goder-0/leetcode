@@ -249,4 +249,16 @@ mod tests {
             vec![0, 4, 1, 3, 2]
         );
     }
+
+    #[test]
+    fn count_of_match() {
+        assert_eq!(
+            iterations::count_of_match::count_of_matches_in_tournament(7),
+            6
+        );
+        assert_eq!(
+            iterations::count_of_match::count_of_matches_in_tournament(14),
+            13
+        );
+    }
 }
