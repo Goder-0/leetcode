@@ -116,4 +116,12 @@ mod tests {
             2
         );
     }
+
+    #[test]
+    fn reduce() {
+        assert_eq!(
+            iterations::reduce::number_of_steps_to_redeuce_a_number_to_zero(14),
+            6
+        );
+    }
 }
