@@ -39,4 +39,13 @@ mod tests {
             vec![1, 3, 6, 10, 15]
         );
     }
+
+    #[test]
+    fn candy() {
+        let v = vec![2, 3, 5, 1, 3];
+        assert_eq!(
+            numbers::candy::kids_with_the_greatest_number_of_cnadies(&v, 3),
+            vec![true, true, true, false, true]
+        );
+    }
 }
