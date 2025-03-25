@@ -1,9 +1,9 @@
 #[must_use]
 pub fn shuffle_the_array(nums: &[i32], n: usize) -> Vec<i32> {
-    let mut ans: Vec<i32> = Vec::with_capacity(2 * n);
-    for i in 0..n {
-        ans.push(nums[i]);
-        ans.push(nums[i + n]);
-    }
-    ans
+    let (arr_x, arr_y) = nums.split_at(n);
+    arr_x
+        .iter()
+        .zip(arr_y.iter())
+        .flat_map(|(&x, &y): (&i32, &i32)| [x, y])
+        .collect()
 }
