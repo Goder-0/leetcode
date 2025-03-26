@@ -1,12 +1,9 @@
+use std::collections::HashMap;
 #[must_use]
-pub fn number_of_good_pairs(nums: &[i32]) -> i32 {
-    let mut ans = 0;
-    for i in 0..nums.len() {
-        for j in 0..i {
-            if nums[i] == nums[j] {
-                ans += 1;
-            }
-        }
+pub fn number_of_good_pairs(nums: &[i32]) -> Option<i32> {
+    let mut pairs = HashMap::new();
+    for &num in nums {
+        pairs.entry(num).and_modify(|n| *n += *n).or_insert(1);
     }
-    ans
+    pairs.values().max().copied()
 }
