@@ -1,14 +1,8 @@
 #[must_use]
-pub fn how_many_numbers_are_smaller_than_the_current_numbers_1(nums: &[i32]) -> Vec<i32> {
-    let mut ans = vec![0; nums.len()];
-    for i in 0..nums.len() {
-        for j in 0..nums.len() {
-            if nums[i] > nums[j] {
-                ans[i] += 1;
-            }
-        }
-    }
-    ans
+pub fn how_many_numbers_are_smaller_than_the_current_numbers_1(nums: &[i32]) -> Vec<usize> {
+    nums.iter()
+        .map(|&num| nums.iter().filter(|&n| *n < num).count())
+        .collect()
 }
 
 #[must_use]
