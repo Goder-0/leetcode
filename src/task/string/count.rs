@@ -1,18 +1,24 @@
-#[must_use]
+#[allow(clippy::missing_errors_doc)]
 pub fn count_items_matching_a_rule(
-    items: &Vec<Vec<String>>,
+    items: &[Vec<String>],
     rule_key: &str,
     rule_value: &str,
-) -> i32 {
-    let mut ans = 0;
-    for item in items {
-        match rule_key {
-            "type" => ans += i32::from(*rule_value == item[0]),
-            "color" => ans += i32::from(*rule_value == item[1]),
-            "name" => ans += i32::from(*rule_value == item[2]),
-            _ => {}
-        }
-    }
+) -> Result<i32, String> {
+    let index = match rule_key {
+        "type" => Some(0),
+        "color" => Some(1),
+        "name" => Some(2),
+        _ => None,
+    };
 
-    ans
+    index
+        .map(|i| {
+            items
+                .iter()
+                .filter(|&item| item.get(i).is_some_and(|v| v == rule_value))
+                .count()
+        })
+        .ok_or_else(|| "Error".to_string())?
+        .try_into()
+        .map_err(|_| "Error".to_string())
 }
