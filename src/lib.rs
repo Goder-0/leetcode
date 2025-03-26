@@ -83,7 +83,7 @@ mod tests {
         ];
         assert_eq!(
             string::maximum_word::maximum_number_of_words_found_in_sentences(&v),
-            6
+            Some(6)
         );
     }
 
