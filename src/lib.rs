@@ -46,7 +46,7 @@ mod tests {
     #[test]
     fn richest() {
         let v = vec![vec![2, 8, 7], vec![7, 1, 3], vec![1, 9, 5]];
-        assert_eq!(vector::richest::richest_customer_wealth(&v), 17);
+        assert_eq!(vector::richest::richest_customer_wealth(&v), Some(17));
     }
 
     #[test]
