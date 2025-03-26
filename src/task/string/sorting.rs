@@ -1,20 +1,18 @@
 #[must_use]
 pub fn sorting_the_sentence(s: &str) -> String {
-    let mut words: Vec<(String, u32)> = s
+    let mut words: Vec<(&str, char)> = s
         .split_whitespace()
-        .map(|word| {
-            let c = word.chars().last();
-            let order = c.unwrap_or('0').to_digit(10).unwrap_or(0);
-            (word[..word.len() - 1].to_string(), order)
+        .filter_map(|word| {
+            let (text, last) = word.split_at(word.len() - 1);
+            last.chars().next().map(|c| (text, c))
         })
         .collect();
 
-    words.sort_by_key(|&(_, order)| order);
+    words.sort_unstable_by_key(|&(_, c)| c.to_digit(10).unwrap_or(0));
 
     words
         .into_iter()
-        .map(|(w, _)| w)
+        .map(|(w, _)| w.to_string())
         .collect::<Vec<String>>()
         .join(" ")
-        .to_string()
 }
