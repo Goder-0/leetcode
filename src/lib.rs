@@ -116,7 +116,7 @@ mod tests {
 
         assert_eq!(
             string::count::count_items_matching_a_rule(&v, "type", "phone"),
-            2
+            Ok(2)
         );
     }
 
