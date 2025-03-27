@@ -130,8 +130,11 @@ mod tests {
 
     #[test]
     fn pair() {
-        let v = vec![1, 2, 3, 1, 1, 3];
-        assert_eq!(numbers::pair::number_of_good_pairs(&v), Some(4));
+        assert_eq!(
+            numbers::pair::number_of_good_pairs(&[1, 2, 3, 1, 1, 3]),
+            Some(4)
+        );
+        assert_eq!(numbers::pair::number_of_good_pairs(&[1, 1, 1, 1]), Some(6));
     }
 
     #[test]
