@@ -15,7 +15,7 @@ pub fn sorting_the_sentence(s: &str) -> String {
 
     words
         .into_iter()
-        .map(|(w, _)| w.to_string())
-        .collect::<Vec<String>>()
+        .map(|(w, _)| w)
+        .collect::<Vec<_>>()
         .join(" ")
 }
