@@ -1,14 +1,17 @@
 #[must_use]
 pub fn sorting_the_sentence(s: &str) -> String {
-    let mut words: Vec<(&str, char)> = s
+    let mut words: Vec<(&str, u32)> = s
         .split_whitespace()
         .filter_map(|word| {
             let (text, last) = word.split_at(word.len() - 1);
-            last.chars().next().map(|c| (text, c))
+            match last.parse() {
+                Ok(id) => Some((text, id)),
+                Err(_) => None,
+            }
         })
         .collect();
 
-    words.sort_unstable_by_key(|&(_, c)| c.to_digit(10).unwrap_or(0));
+    words.sort_unstable_by_key(|&(_, idx)| idx);
 
     words
         .into_iter()
