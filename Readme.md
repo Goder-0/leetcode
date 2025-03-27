@@ -4,12 +4,17 @@ The goal of this process is to improve Rust proficiency.
 
 ## Requirements
 
-1. A README file should be created arbitrarily, but a CHANGELOG file is not required.
-2. Each problem should have a corresponding issue, and a PR should be submitted for it. The issue should include a link to the problem.
+1. A README file should be created arbitrarily, but a CHANGELOG file is not
+   required.
+2. Each problem should have a corresponding issue, and a PR should be submitted
+   for it. The issue should include a link to the problem.
 3. Once the reviewer approves, the merge is performed by oneself.
-4. If modifications from the PR review process need to be applied to already merged code, a separate issue should be created and addressed.
+4. If modifications from the PR review process need to be applied to already
+   merged code, a separate issue should be created and addressed.
 5. External libraries should not be used.
-6. If the problem's requirements are flexible, participants can decide how to proceed. The goal is to become familiar with Rust, rather than just solving problems.
+6. If the problem's requirements are flexible, participants can decide how to
+   proceed. The goal is to become familiar with Rust, rather than just solving
+   problems.
 
 ## License
 
@@ -26,5 +31,5 @@ the specific language governing permissions and limitations under the License.
 ## Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you, as defined in the ClumL License, shall be licensed as above, without any additional
-terms or conditions.
+for inclusion in the work by you, as defined in the ClumL License, shall be
+licensed as above, without any additional terms or conditions.
