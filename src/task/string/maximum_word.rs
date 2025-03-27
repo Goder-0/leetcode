@@ -2,6 +2,6 @@
 pub fn maximum_number_of_words_found_in_sentences(sentenses: &[String]) -> Option<usize> {
     sentenses
         .iter()
-        .map(|sentense| sentense.split(' ').count())
+        .map(|sentense| sentense.split_whitespace().count())
         .max()
 }
