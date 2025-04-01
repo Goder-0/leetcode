@@ -1,12 +1,15 @@
 #[must_use]
 pub fn decode_xored_array(encoded: &[i32], first: i32) -> Vec<i32> {
-    let mut ans: Vec<i32> = encoded
+    let mut ans = Vec::with_capacity(encoded.len() + 1); // 최적화된 벡터 생성
+    ans.push(first);
+
+    encoded
         .iter()
-        .scan(first, |encode, &num| {
-            *encode ^= num;
-            Some(*encode)
+        .scan(first, |state, &num| {
+            *state ^= num;
+            Some(*state)
         })
-        .collect();
-    ans.insert(0, first);
+        .for_each(|n| ans.push(n)); // collect() 없이 직접 push
+
     ans
 }
