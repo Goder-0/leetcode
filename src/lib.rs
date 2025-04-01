@@ -240,6 +240,10 @@ mod tests {
             iterations::reduce::number_of_steps_to_reduce_a_number_to_zero(14),
             6
         );
+        assert_eq!(
+            iterations::reduce::number_of_steps_to_reduce_a_number_to_zero(0),
+            0
+        );
     }
 
     #[test]
